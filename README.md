@@ -78,3 +78,62 @@
   }
 }
 ```
+
+`http://localhost:8080/users?page=1&size=2`
+
+```$xslt
+{
+  "_embedded" : {
+    "users" : [ {
+      "name" : "user2",
+      "email" : "u2@u.u",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/3"
+        },
+        "appUser" : {
+          "href" : "http://localhost:8080/users/3"
+        }
+      }
+    }, {
+      "name" : "user3",
+      "email" : "u3@u.u",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/4"
+        },
+        "appUser" : {
+          "href" : "http://localhost:8080/users/4"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "first" : {
+      "href" : "http://localhost:8080/users?page=0&size=2"
+    },
+    "prev" : {
+      "href" : "http://localhost:8080/users?page=0&size=2"
+    },
+    "self" : {
+      "href" : "http://localhost:8080/users{&sort}",
+      "templated" : true
+    },
+    "next" : {
+      "href" : "http://localhost:8080/users?page=2&size=2"
+    },
+    "last" : {
+      "href" : "http://localhost:8080/users?page=6&size=2"
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/profile/users"
+    }
+  },
+  "page" : {
+    "size" : 2,
+    "totalElements" : 14,
+    "totalPages" : 7,
+    "number" : 1
+  }
+}
+```
