@@ -2,6 +2,8 @@
 
 ### Paging And Sorting Repository
 
+## REST entry point
+
 `GET http://localhost:8080/`  
 
 
@@ -18,6 +20,8 @@
   }
 }
 ```
+
+## Repository - findAll
 
 `GET http://localhost:8080/users`
 
@@ -62,6 +66,8 @@
 }
 ```
 
+## Repository findById
+
 `GET http://localhost:8080/users/8`
 
 ```
@@ -78,6 +84,8 @@
   }
 }
 ```
+
+## Paging And Sorting
 
 `http://localhost:8080/users?page=1&size=2`
 
@@ -137,6 +145,8 @@
   }
 }
 ```
+
+## Repository - FindByEmail
 
 `GET http://localhost:8080/users/search/findByEmail?email=a@a.a`
 
