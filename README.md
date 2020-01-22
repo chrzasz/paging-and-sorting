@@ -137,3 +137,20 @@
   }
 }
 ```
+
+`GET http://localhost:8080/users/search/findByEmail?email=a@a.a`
+
+```$xslt
+{
+  "name" : "admin",
+  "email" : "a@a.a",
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/users/1"
+    },
+    "appUser" : {
+      "href" : "http://localhost:8080/users/1"
+    }
+  }
+}
+```
