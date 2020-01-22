@@ -8,8 +8,8 @@
 ```
 {
   "_links" : {
-    "appUsers" : {
-      "href" : "http://localhost:8080/appUsers{?page,size,sort}",
+    "users" : {
+      "href" : "http://localhost:8080/users{?page,size,sort}",
       "templated" : true
     },
     "profile" : {
@@ -19,65 +19,61 @@
 }
 ```
 
-`GET http://localhost:8080/appUsers`
+`GET http://localhost:8080/users`
 
 ```
 {
   "_embedded" : {
-    "appUsers" : [ {
+    "users" : [ {
       "name" : "admin",
       "email" : "a@a.a",
       "_links" : {
         "self" : {
-          "href" : "http://localhost:8080/appUsers/1"
+          "href" : "http://localhost:8080/users/1"
         },
         "appUser" : {
-          "href" : "http://localhost:8080/appUsers/1"
+          "href" : "http://localhost:8080/users/1"
         }
       }
     }, {
-      "name" : "user",
-      "email" : "u@u.u",
+      "name" : "user1",
+      "email" : "u1@u.u",
       "_links" : {
         "self" : {
-          "href" : "http://localhost:8080/appUsers/2"
+          "href" : "http://localhost:8080/users/2"
         },
         "appUser" : {
-          "href" : "http://localhost:8080/appUsers/2"
+          "href" : "http://localhost:8080/users/2"
         }
       }
-    } ]
-  },
-  "_links" : {
-    "self" : {
-      "href" : "http://localhost:8080/appUsers{?page,size,sort}",
-      "templated" : true
-    },
-    "profile" : {
-      "href" : "http://localhost:8080/profile/appUsers"
-    }
-  },
-  "page" : {
-    "size" : 20,
-    "totalElements" : 2,
-    "totalPages" : 1,
-    "number" : 0
-  }
+    }, {
+      "name" : "user2",
+      "email" : "u2@u.u",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/users/3"
+        },
+        "appUser" : {
+          "href" : "http://localhost:8080/users/3"
+        }
+      }
+    }, 
+...
 }
 ```
 
-`GET http://localhost:8080/appUsers/1`
+`GET http://localhost:8080/users/8`
 
 ```
 {
-  "name" : "admin",
-  "email" : "a@a.a",
+  "name" : "user7",
+  "email" : "u7@u.u",
   "_links" : {
     "self" : {
-      "href" : "http://localhost:8080/appUsers/1"
+      "href" : "http://localhost:8080/users/8"
     },
     "appUser" : {
-      "href" : "http://localhost:8080/appUsers/1"
+      "href" : "http://localhost:8080/users/8"
     }
   }
 }
